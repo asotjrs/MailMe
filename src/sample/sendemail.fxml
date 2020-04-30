@@ -1,0 +1,25 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<DialogPane fx:id="sendEmailDialogPane" fx:controller="sample.EmailController"
+            xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: cyan">
+    <headerText>
+        Fill in the information to send the email
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="To: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="toId" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Subject" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="subjectId" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Content: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextArea fx:id="contentId" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                      wrapText="true"/>
+
+            <Label text="Add file: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <Button text="select file" onAction="#handleClick" GridPane.rowIndex="3"
+                    GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

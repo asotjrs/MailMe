@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<BorderPane fx:id="mainPanel" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+    <top>
+        <GridPane hgap="10" prefHeight="35.0" prefWidth="346.0" style="-fx-background-color: azure">
+
+            <MenuBar style="-fx-start-margin: 10px" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <menus>
+                    <Menu text="Contacts">
+                        <items>
+                            <MenuItem onAction="#showAddContactDialog" text="Add..."/>
+                        </items>
+                        <items>
+                            <MenuItem onAction="#showEditContactDialog" text="Edit..."/>
+                        </items>
+                        <items>
+                            <MenuItem onAction="#deleteContact" text="Delete"/>
+                        </items>
+                        <items>
+                            <MenuItem onAction="#sendEmail" text="Send Email"/>
+                        </items>
+                        <items>
+                            <MenuItem onAction="#exit" text="Exit"/>
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+
+            <ComboBox fx:id="filterComboBox" onAction="#handleFilterType" GridPane.columnIndex="1"
+                      GridPane.rowIndex="0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="All"/>
+                        <String fx:value="Teachers"/>
+                        <String fx:value="Students"/>
+                        <String fx:value="Employee"/>
+                        <String fx:value="Other"/>
+                    </FXCollections>
+                </items>
+                <value>
+                    <String fx:value="All"/>
+                </value>
+            </ComboBox>
+
+            <Label fx:id="emailLoggedIn" prefHeight="17.0" prefWidth="195.0" style="-fx-background-color: red;"
+                   text="logged in as :" textFill="WHITE" wrapText="true" GridPane.columnIndex="2">
+                <font>
+                    <Font name="System Bold Italic" size="12.0"/>
+                </font>
+            </Label>
+            <padding>
+                <Insets bottom="5.0" left="10.0" top="5.0"/>
+            </padding>
+        </GridPane>
+    </top>
+    <center>
+        <TableView fx:id="contactsTable" onKeyPressed="#handleKeyPressed">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+            <columns>
+                <TableColumn text="First Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Last Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Phone Number">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phoneNumber"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Email Address">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="_id"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

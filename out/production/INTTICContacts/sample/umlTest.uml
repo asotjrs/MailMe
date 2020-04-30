@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="1166.0">sample.Main</node>
+    <node x="728.0" y="0.0">sample.datamodel.Contact</node>
+    <node x="841.0" y="781.0">sample.JavaMailUtil</node>
+    <node x="0.0" y="781.0">sample.ContactController</node>
+    <node x="212.0" y="1166.0">sample.GetAllContactsTask</node>
+    <node x="424.0" y="0.0">sample.Controller</node>
+    <node x="0.0" y="0.0">sample.datamodel.ContactData</node>
+    <node x="552.0" y="781.0">sample.EmailController</node>
+    <node x="287.0" y="781.0">sample.LoginController</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="360.5" y="257.5" />
+  <SelectedNodes>
+    <node>sample.LoginController</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

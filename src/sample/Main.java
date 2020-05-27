@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main.fxml"));
         Parent root = fxmlLoader.load();
-        primaryStage.setTitle("INTTIC Contacts");
+        primaryStage.setTitle("Mail Me");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
 
